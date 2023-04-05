@@ -25,6 +25,10 @@ const BoxInbox = (props: BoxInboxProps) => {
 
   const handleSubmitMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    handleSendMessage();
+  };
+
+  const handleSendMessage = () => {
     if (textInput !== "") {
       const newChat: ChatType = {
         id: Math.floor(Math.random() * 1000),
@@ -70,6 +74,8 @@ const BoxInbox = (props: BoxInboxProps) => {
       avatar: detailChat?.avatar || <div></div>,
     };
     setDetailChat(newDetailChat);
+    setShowMore(false);
+    setSelectedChatIndex(null);
   };
   return (
     <div className="mb-5">
@@ -213,7 +219,7 @@ const BoxInbox = (props: BoxInboxProps) => {
                 {detailChat?.conversations?.map(
                   (conversation: ChatType, index: number) => (
                     <div
-                      className={`flex min-w-[510px] max-w-sm ${
+                      className={`flex min-w-[500px] max-w-sm ${
                         conversation.isYou === true
                           ? "justify-end"
                           : "justify-start"
@@ -243,8 +249,8 @@ const BoxInbox = (props: BoxInboxProps) => {
                                 : "justify-start bg-[#FCEED3]"
                             }`}>
                             <div className="flex flex-col">
-                              <div>{conversation.message}</div>
-                              <div>
+                              <div className="mb-2">{conversation.message}</div>
+                              <div className="text-xs text-gray-500">
                                 {moment(conversation.timestamp).format("hh:mm")}
                               </div>
                             </div>
@@ -328,7 +334,7 @@ const BoxInbox = (props: BoxInboxProps) => {
                   </div>
                 </form>
                 <button
-                  onClick={() => handleSubmitMessage}
+                  onClick={() => handleSendMessage()}
                   className="px-4 py-2 bg-[#2F80ED] rounded text-white font-medium">
                   Send
                 </button>

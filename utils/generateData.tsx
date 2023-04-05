@@ -80,7 +80,40 @@ export const chatList = [
     timestamp: "2021-06-02T13:00:00.000Z",
     newNotification: false,
     participants: 2,
-    conversations: null,
+    conversations: [
+      {
+        id: 1,
+        sender: "Robson",
+        senderId: 1,
+        isYou: false,
+        message: "Hi there!",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 2,
+        sender: "Robson",
+        senderId: 1,
+        isYou: false,
+        message: "It's very important. Please check this out!",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 3,
+        sender: "Barry Allen",
+        senderId: 2,
+        isYou: false,
+        message: "Okay I'll check it out",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 4,
+        sender: "Muhammad Naufal",
+        senderId: 3,
+        isYou: true,
+        message: "Hey, whats good??",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+    ],
     avatar: (
       <svg
         width="51"
@@ -121,7 +154,40 @@ export const chatList = [
     timestamp: "2021-06-01T13:00:00.000Z",
     newNotification: false,
     participants: 3,
-    conversations: null,
+    conversations: [
+      {
+        id: 1,
+        sender: "Christopher",
+        senderId: 1,
+        isYou: false,
+        message: "Hi there lets watch a movie!",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 2,
+        sender: "Robson",
+        senderId: 1,
+        isYou: false,
+        message: "It's very important. Please check this out!",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 3,
+        sender: "Ricky",
+        senderId: 2,
+        isYou: false,
+        message: "Okay I'll check it out",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+      {
+        id: 4,
+        sender: "Muhammad Naufal",
+        senderId: 3,
+        isYou: true,
+        message: "Hey, whats that?",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+    ],
     avatar: (
       <svg
         width="51"
@@ -161,7 +227,16 @@ export const chatList = [
     timestamp: "2021-06-01T13:00:00.000Z",
     newNotification: false,
     participants: null,
-    conversations: null,
+    conversations: [
+      {
+        id: 1,
+        sender: "FastVisa Support",
+        senderId: 1,
+        isYou: false,
+        message: "Hey there! Welcome to your inbox",
+        timestamp: "2021-01-01T13:00:00.000Z",
+      },
+    ],
     avatar: (
       <svg
         width="34"
